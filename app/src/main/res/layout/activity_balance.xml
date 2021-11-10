@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelBalance" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:focusableInTouchMode="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/dp16"
+            android:layoutDirection="ltr">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:background="@color/transparent"
+                    android:onClick="@{(a)->viewModel.return1()}"
+                    android:layout_gravity="start">
+                </androidx.appcompat.widget.AppCompatImageButton>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:padding="@dimen/dp32"
+    android:weightSum="5">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:backgroundTint="@color/md_indigo_700"
+        app:cardCornerRadius="@dimen/dp8"
+        tools:ignore="NestedWeights">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:textColorHint="@color/md_white_1000"
+            app:hintTextColor="@color/md_white_1000">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/myEditText"
+                android:hint="@string/value"
+                android:inputType="numberDecimal"
+                android:drawableEnd="@drawable/ic_wallet"
+                android:text="@={viewModel.value}"
+                android:layoutDirection="ltr">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp32"
+            android:paddingRight="@dimen/dp32">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/myButton"
+                android:text="@string/add_cash"
+                android:drawableStart="@drawable/ic_add"
+                android:onClick="@{(a)->viewModel.onClickAdd()}"
+                android:id="@+id/add_income">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/myButton"
+                android:text="@string/min_cash"
+                android:drawableStart="@drawable/ic_min"
+                android:layout_marginTop="@dimen/dp24"
+                android:onClick="@{(a)->viewModel.onClickMin()}"
+                android:id="@+id/min_income">
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</layout>

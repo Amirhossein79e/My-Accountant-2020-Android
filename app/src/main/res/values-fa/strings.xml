@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_value">لطفا مبلغ را وارد کنید</string>
+    <string name="app_name">چرتکه</string>
+    <string name="value">مبلغ :</string>
+    <string name="detail">توضیحات :</string>
+    <string name="add_spend">افزودن هزینه</string>
+    <string name="add_cash">افزودن موجودی</string>
+    <string name="min_cash">کاهش موجودی</string>
+    <string name="cash">موجودی :</string>
+    <string name="change_cash">تغییر موجودی</string>
+    <string name="add_spends">افرودن هزینه ها</string>
+    <string name="spends_list">لیست هزینه ها</string>
+    <string name="home">خانه</string>
+    <string name="food">غذا</string>
+    <string name="health">سلامت</string>
+    <string name="shopping">خرید</string>
+    <string name="traffic">حمل و نقل</string>
+    <string name="clothes">لباس</string>
+    <string name="phone">تلفن</string>
+    <string name="car">ماشین</string>
+    <string name="hobby">تفریح</string>
+    <string name="internet">اینترنت</string>
+    <string name="other">سایر</string>
+    <string name="loan_pay">اقساط</string>
+    <string name="end_date">تاریخ پایان</string>
+    <string name="start_date">تاریخ شروع</string>
+    <string name="show">نمایش</string>
+    <string name="language">زبان : </string>
+    <string name="developer">توسعه دهنده : </string>
+    <string name="myName">امیرحسین پورعمادی</string>
+    <string name="email">ایمیل :</string>
+    <string name="myEmail">amirhossein79.e@gmail.com</string>
+    <string name="setting">تنضیمات</string>
+    <string name="Bug">گذارش اشکال</string>
+    <string name="exit">خروج</string>
+    <string name="date_true">حداقل بازه مجاز یک روز است</string>
+    <string name="alert_title">خروج</string>
+    <string name="alert_message">آیا میخواهید خارج شوید ؟</string>
+    <string name="alert_pos">بله</string>
+    <string name="alert_neg">خیر</string>
+    <string name="total">مجموع : </string>
+    <string name="description">نمودار موجودی</string>
+    <string name="account">حساب :</string>
+    <string name="set_date">تعیین تاریخ</string>
+    <string name="set_reminder">تعیین یادآوری</string>
+    <string name="ok">تایید</string>
+    <string name="name">نام :</string>
+    <string name="cancel">لغو</string>
+    <string name="today">امروز</string>
+    <string name="plz_true">لطفا اطلاعات را صحیح وارد کنید</string>
+    <string name="cheque_reminder1">یادآوری چک با مبلغ </string>
+    <string name="to_date1">به تاریخ</string>
+    <string name="cheque_reminder">Reminder of bank cheque with amount of </string>
+    <string name="to_date">in</string>
+    <string name="cheque_list">لیست چک ها</string>
+    <string name="add_cheque">افزودن چک</string>
+    <string-array name="language_array">
+        <item>"انتخاب زبان"</item>
+        <item>"فارسی"</item>
+        <item>"English"</item>
+    </string-array>
+</resources>

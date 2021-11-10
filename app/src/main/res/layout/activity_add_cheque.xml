@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelAddCheque" />
+    </data>
+
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddChequeActivity"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow"
+            android:onClick="@{(a)->viewModel.return1()}">
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp32"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/dp8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/value"
+                    android:textColorHint="@color/md_white_1000"
+                    app:hintTextColor="@color/md_white_1000"
+                    android:backgroundTint="@color/transparent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        style="@style/myEditText"
+                        android:drawableEnd="@drawable/ic_money"
+                        android:layoutDirection="ltr"
+                        android:inputType="numberDecimal"
+                        android:text="@={viewModel.value}">
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:cardCornerRadius="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp32">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_white_1000"
+                    app:hintTextColor="@color/md_white_1000">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/myEditText"
+                    android:hint="@string/name"
+                    android:drawableEnd="@drawable/ic_name"
+                    android:text="@={viewModel.name}">
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_white_1000">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_white_1000"
+                    app:hintTextColor="@color/md_white_1000">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/myEditText"
+                    android:hint="@string/account"
+                    android:drawableEnd="@drawable/ic_bank"
+                    android:text="@={viewModel.account}">
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/dp32"
+        android:paddingEnd="@dimen/dp32"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_background"
+            android:text="@string/set_date"
+            android:drawableStart="@drawable/ic_date"
+            android:gravity="center"
+            android:padding="@dimen/dp8"
+            android:layoutDirection="ltr"
+            android:onClick="@{(a)->viewModel.setDate()}">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_background"
+            android:text="@string/set_reminder"
+            android:drawableStart="@drawable/ic_alert"
+            android:gravity="center"
+            android:padding="@dimen/dp8"
+            android:layoutDirection="ltr"
+            android:layout_marginTop="@dimen/dp32"
+            android:onClick="@{(a)->viewModel.setAlarm()}">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_background"
+            android:text="@string/ok"
+            android:drawableStart="@drawable/ic_check"
+            android:gravity="center"
+            android:padding="@dimen/dp8"
+            android:layoutDirection="ltr"
+            android:layout_marginTop="@dimen/dp32"
+            android:onClick="@{(a)->viewModel.addCheque()}"
+            android:id="@+id/ok_chque">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

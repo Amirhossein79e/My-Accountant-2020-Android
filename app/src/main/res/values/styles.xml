@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_indigo_700</item>
+        <item name="colorPrimaryDark">@color/md_indigo_900</item>
+        <item name="colorAccent">@color/md_indigo_A700</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:textSize">@dimen/myText</item>
+        <item name="fontFamily">@font/yekan</item>
+        <item name="android:actionMenuTextColor">@color/md_black_1000</item>
+        <item name="colorControlActivated">@color/md_white_1000</item>
+    </style>
+
+    <style name="dialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="dialogCornerRadius">@dimen/dp8</item>
+    </style>
+
+    <style name="myEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:padding">@dimen/dp8</item>
+        <item name="android:textSize">@dimen/myText</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:drawablePadding">@dimen/dp4</item>
+    </style>
+
+    <style name="myButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dp8</item>
+        <item name="android:layoutDirection">ltr</item>
+    </style>
+
+</resources>

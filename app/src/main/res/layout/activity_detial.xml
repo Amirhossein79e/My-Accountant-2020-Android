@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelDetial" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:layoutDirection="locale">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/dp16"
+            android:layoutDirection="ltr">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow"
+                android:background="@color/transparent"
+                android:onClick="@{(a)->viewModel.return1()}"
+                android:layout_gravity="start">
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp32"
+            android:paddingRight="@dimen/dp32"
+            android:paddingTop="@dimen/dp32"
+            android:weightSum="5">
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/md_indigo_700"
+                app:cardCornerRadius="@dimen/dp8"
+                tools:ignore="NestedWeights">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:textColor="@color/md_white_1000"
+                        android:textColorHint="@color/md_white_1000"
+                        android:hint="@string/value"
+                        android:padding="@dimen/dp8"
+                        android:inputType="numberDecimal"
+                        android:drawableEnd="@drawable/ic_money"
+                        android:text="@{viewModel.value}"
+                        android:textSize="@dimen/myText"
+                        android:gravity="center_vertical">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:backgroundTint="@color/md_indigo_700"
+                app:cardCornerRadius="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp64">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:textColor="@color/md_white_1000"
+                        android:textColorHint="@color/md_white_1000"
+                        android:padding="@dimen/dp8"
+                        android:drawableEnd="@drawable/ic_message"
+                        android:text="@{viewModel.detial}"
+                        android:textSize="@dimen/myText">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp162"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dp8"
+            android:id="@+id/recycler_item"
+            android:layoutDirection="rtl"
+            android:layout_marginTop="@dimen/dp8"
+            app:cardElevation="@dimen/dp8">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@drawable/card_background"
+               android:padding="@dimen/dp8">
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="@dimen/dp56"
+                   android:layout_height="@dimen/dp56"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentStart="true"
+                   android:id="@+id/img">
+
+               </androidx.appcompat.widget.AppCompatImageView>
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/txt_myDate"
+                   android:layout_alignParentEnd="true"
+                   android:text=""
+                   android:layout_alignParentBottom="true"
+                   android:textColor="@color/md_white_1000"
+                   android:textSize="@dimen/sp18"
+                   android:layout_marginTop="@dimen/dp8"
+                   android:fontFamily="@font/yekan">
+               </androidx.appcompat.widget.AppCompatTextView>
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentTop="true"
+                   android:text=""
+                   android:id="@+id/txt_cash"
+                   android:textColor="@color/md_white_1000"
+                   android:textSize="@dimen/sp18"
+                   android:fontFamily="@font/yekan">
+               </androidx.appcompat.widget.AppCompatTextView>
+
+
+           </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

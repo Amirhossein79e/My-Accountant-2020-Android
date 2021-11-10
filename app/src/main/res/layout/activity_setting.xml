@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelSetting" />
+    </data>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.amirhosseinemadi.myAccountant.view.SettingActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:background="@color/transparent"
+            android:onClick="@{(a)->viewModel.return1()}">
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/language"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginBottom="@dimen/dp16">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:background="@drawable/card_background"
+        android:entries="@array/language_array"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:popupBackground="@drawable/card_background"
+        android:gravity="center"
+        android:id="@+id/spinner"
+        android:textAlignment="center">
+    </androidx.appcompat.widget.AppCompatSpinner>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developer"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp32">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+         android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:background="@drawable/card_background"
+        android:text="@string/myName"
+        android:gravity="center">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp32">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32"
+        android:background="@drawable/card_background"
+        android:text="@string/myEmail"
+        android:gravity="center">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+</LinearLayout>
+
+</layout>

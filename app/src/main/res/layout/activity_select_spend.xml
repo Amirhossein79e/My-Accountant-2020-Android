@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelSelect" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.SpendActivity"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:layoutDirection="ltr">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/dp16">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:background="@color/transparent"
+                    android:onClick="@{(a)->viewModel.return1()}"
+                    android:layout_gravity="start">
+                </androidx.appcompat.widget.AppCompatImageButton>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_home"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/home"
+                    android:onClick="@{(a)->viewModel.rentClick()}"
+                    tools:ignore="NestedWeights"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_health"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/health"
+                    android:onClick="@{(a)->viewModel.healthClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_food"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/food"
+                    android:onClick="@{(a)->viewModel.foodClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_shop"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/shopping"
+                    android:onClick="@{(a)->viewModel.buyClick()}"
+                    tools:ignore="NestedWeights"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_transport"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/traffic"
+                    android:onClick="@{(a)->viewModel.trafficClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_clothes"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/clothes"
+                    android:onClick="@{(a)->viewModel.clothesClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_phone"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/phone"
+                    android:onClick="@{(a)->viewModel.phoneClick()}"
+                    tools:ignore="NestedWeights"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_car"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/car"
+                    android:onClick="@{(a)->viewModel.carClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_hobby"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/hobby"
+                    android:onClick="@{(a)->viewModel.hobbyClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_computer"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/internet"
+                    android:onClick="@{(a)->viewModel.internetClick()}"
+                    tools:ignore="NestedWeights"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_pay"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/loan_pay"
+                    android:onClick="@{(a)->viewModel.payClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_square"
+                    android:background="@drawable/btn_background"
+                    android:padding="@dimen/dp4"
+                    android:layout_margin="@dimen/dp16"
+                    android:text="@string/other"
+                    android:onClick="@{(a)->viewModel.otherClick()}"
+                    android:textSize="@dimen/myButton">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</layout>

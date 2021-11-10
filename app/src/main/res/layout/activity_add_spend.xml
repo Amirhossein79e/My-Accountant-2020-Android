@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.myAccountant.viewModel.ViewModelAddSpend" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:focusableInTouchMode="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:gravity="start"
+            android:padding="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow"
+                android:background="@color/transparent"
+                android:onClick="@{(a)->viewModel.return1()}"
+                android:layout_gravity="start">
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp32"
+        android:paddingRight="@dimen/dp32"
+        android:paddingTop="@dimen/dp32"
+        android:weightSum="5">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/md_indigo_700"
+            app:cardCornerRadius="@dimen/dp8"
+            tools:ignore="NestedWeights">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background"
+                android:textColorHint="@color/md_white_1000"
+                app:hintTextColor="@color/md_white_1000">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/myEditText"
+                    android:hint="@string/value"
+                    android:inputType="numberDecimal"
+                    android:drawableEnd="@drawable/ic_money"
+                    android:text="@={viewModel.value}"
+                    android:layoutDirection="ltr">
+                </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:backgroundTint="@color/md_indigo_700"
+            app:cardCornerRadius="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp64">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background"
+                android:textColorHint="@color/md_white_1000"
+                app:hintTextColor="@color/md_white_1000">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/myEditText"
+                    android:hint="@string/detail"
+                    android:drawableEnd="@drawable/ic_message"
+                    android:gravity="start"
+                    android:text="@={viewModel.detail}">
+                </androidx.appcompat.widget.AppCompatEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/dp32"
+            android:paddingLeft="@dimen/dp32">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background"
+                android:text="@string/add_spend"
+                android:drawableStart="@drawable/ic_add"
+                android:gravity="center"
+                android:padding="@dimen/dp8"
+                android:onClick="@{(a)->viewModel.insert()}"
+                android:layout_centerInParent="true"
+                android:id="@+id/add_spend"
+                android:layoutDirection="ltr">
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>
